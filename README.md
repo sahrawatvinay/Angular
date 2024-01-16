@@ -12,4 +12,11 @@
 
 # Creating new project
 - ng new my-first-app
-- ng-serve (to run the project on browser, 'Ctrl + C' to stop)
+- ng serve (to run the project on browser, 'Ctrl + C' to stop)
+
+# Steps to run a project after cloning
+- In terminal type npm install to install all the dependencies that are there in package.json file, being used in the project
+
+# Installing dependencies
+- npm install --save bootstrap@3 (saves locally, for global use -g)
+- to use, we need add reference of bootstap in angular.json file
