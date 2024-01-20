@@ -20,3 +20,6 @@
 # Installing dependencies
 - npm install --save bootstrap@3 (saves locally, for global use -g)
 - to use, we need add reference of bootstap in angular.json file
+
+# Using CLI commands
+- create components using : ng generate component "___" or simply ng g c "___"
