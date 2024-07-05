@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { FacebookProfileData } from '../models/facebook-profile-data';
 
 @Component({
   selector: 'app-post',
@@ -10,4 +11,6 @@ import { Component } from '@angular/core';
 export class PostComponent {
   constructor() {}
   title: string = 'This is title for posts!';
+
+  @Input() fromParentData!: FacebookProfileData;
 }
