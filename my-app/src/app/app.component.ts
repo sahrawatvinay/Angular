@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, AfterViewInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -12,7 +12,7 @@ import { FacebookProfileData } from './models/facebook-profile-data';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
-export class AppComponent {
+export class AppComponent implements AfterViewInit {
   title: string = 'my-app';
   appCompParentData: FacebookProfileData = {
     name: 'Vinay',
@@ -22,4 +22,12 @@ export class AppComponent {
     },
     singlePosts: [{ data: 'abc' }, { data: 'def' }],
   };
+
+  @ViewChild(PostComponent) childPostCompData!: string;
+  constructor() {
+    console.log(this.childPostCompData);
+  }
+  ngAfterViewInit(): void {
+    console.log(this.childPostCompData);
+  }
 }

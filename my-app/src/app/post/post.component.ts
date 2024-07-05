@@ -11,6 +11,6 @@ import { FacebookProfileData } from '../models/facebook-profile-data';
 export class PostComponent {
   constructor() {}
   title: string = 'This is title for posts!';
-
+  postChildData: string = 'this is child data from Post';
   @Input() fromParentData!: FacebookProfileData;
 }
