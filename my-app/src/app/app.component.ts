@@ -30,4 +30,7 @@ export class AppComponent implements AfterViewInit {
   ngAfterViewInit(): void {
     console.log(this.childPostCompData);
   }
+  receiveMsgParent($event: string) {
+    console.log($event);
+  }
 }
