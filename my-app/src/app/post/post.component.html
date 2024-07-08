@@ -1,21 +1,28 @@
-<h4>{{title}}</h4>
-<p>{{fromParentData.name}}</p>
-<p>{{fromParentData.details.age}}</p>
-<p>{{fromParentData.details.dob}}</p>
-<p>{{fromParentData.singlePosts.length}}</p>
-<button (click) = 'sendDataToParentByEmit()'>Clickkk</button>
+<h4>{{ title }}</h4>
+<p>{{ fromParentData.name }}</p>
+<p>{{ fromParentData.details.age }}</p>
+<p>{{ fromParentData.details.dob }}</p>
+<p>{{ fromParentData.singlePosts.length }}</p>
+<p>{{ summaryText | summary : 20 }}</p>
+<button (click)="sendDataToParentByEmit()">Clickkk</button>
 
 <div class="post-form-fields">
-    <h3 [class.add-bkgrnd]="formData.background">Post form</h3><br /><br />
-    <input type="text" [(ngModel)] = "formData.postTitle"/><br /><br />
-    <textarea [(ngModel)] = "formData.postDescription"></textarea><br /><br />
-    <input type="text" [(ngModel)] = "formData.postImageUrl"/><br /><br />
-    <input type="text" [(ngModel)] = "formData.postUrl" /><br /><br />
-    <input type="checkbox" [(ngModel)] = "formData.background"/> background
+  <h3 [class.add-bkgrnd]="formData.background">Post form</h3>
+  <br /><br />
+  <input type="text" [(ngModel)]="formData.postTitle" /><br /><br />
+  <textarea [(ngModel)]="formData.postDescription"></textarea><br /><br />
+  <input type="text" [(ngModel)]="formData.postImageUrl" /><br /><br />
+  <input type="text" [(ngModel)]="formData.postUrl" /><br /><br />
+  <input type="checkbox" [(ngModel)]="formData.background" /> background
 </div>
 <div class="form-post-content">
-   <p>{{formData.postTitle}}</p> 
-   <p>{{formData.postDescription}}</p> 
-   <img [src] = "formData.postImageUrl"> 
-   <a [href] = "formData.postUrl" target="_blank" [style.display]="formData.postUrl ? 'block': 'none'">More infoo</a>
+  <p>{{ formData.postTitle }}</p>
+  <p>{{ formData.postDescription }}</p>
+  <img [src]="formData.postImageUrl" />
+  <a
+    [href]="formData.postUrl"
+    target="_blank"
+    [style.display]="formData.postUrl ? 'block' : 'none'"
+    >More infoo</a
+  >
 </div>
