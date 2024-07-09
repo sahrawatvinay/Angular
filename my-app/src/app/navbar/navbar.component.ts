@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { UserService } from '../Services/user.service';
 @Component({
   selector: 'app-navbar',
   standalone: true,
@@ -20,7 +21,10 @@ export class NavbarComponent {
   btnClick(value: string) {
     this.btnStepVal = value;
   }
-  constructor() {}
+  usersListNav: Array<any>;
+  constructor(private usrSvc: UserService) {
+    this.usersListNav = usrSvc.userList;
+  }
   addItem(): void {
     this.objArray.push({ id: 6, name: 'gg', sub: 'wp' });
   }

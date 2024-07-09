@@ -4,11 +4,13 @@ import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './navbar/navbar.component';
 import { PostComponent } from './post/post.component';
 import { FacebookProfileData } from './models/facebook-profile-data';
+import { UserService } from './Services/user.service';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [CommonModule, RouterOutlet, NavbarComponent, PostComponent],
+  providers: [UserService],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })

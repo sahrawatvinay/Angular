@@ -26,3 +26,10 @@
     >More infoo</a
   >
 </div>
+
+<div>
+  <h3>User List from Service</h3>
+  <ul>
+    <li *ngFor="let usr of users; let i = index">{{ usr.name }}</li>
+  </ul>
+</div>
