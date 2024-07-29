@@ -1,5 +1,13 @@
 <div class="container">
   <div class="col-xs-12">
+    <div>
+      <form>
+        <div class="form-group">
+          <input type="text" name="wish" id="wish-id" [(ngModel)] = "newWishText">
+        </div>
+        <button type="submit" class="btn btn-primary" (click) = "$event.preventDefault(); addWish()">Submit</button>
+      </form>
+    </div>
     <div *ngIf="wishItems.length === 0; else showItems">
       <p>No wishes to display</p>
     </div>
